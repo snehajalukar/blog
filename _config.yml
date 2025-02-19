@@ -6,8 +6,6 @@ exclude:
 - README.md
 - Gemfile
 - Gemfile.lock
-- vendor
-- node_modules
 
 # Set plugins
 plugins:
