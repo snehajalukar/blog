@@ -14,7 +14,7 @@ plugins:
 - jekyll-remote-theme
 
 # Site settings
-url: 'https://mydomain.com'
+url: 'http://blog.snehacodes.com'
 baseurl: ''
 title: 'My blog'
 description: 'This is my new blog'
