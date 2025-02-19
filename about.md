@@ -3,4 +3,4 @@ layout: page
 title: About
 ---
 
-I'm not sure yet what this blog is about, but I'm sure I'll work it out soon.
+Hi! My name is Sneha - I'm currently a cloud infra engineer and formerly worked as a software engineer. This is my technical blog.
