@@ -6,7 +6,7 @@ categories:
 feature_image: "https://picsum.photos/2560/600?image=872"
 ---
 
-Hi! My name is Sneha, and this is the first post in a a series of blog posts I'm writing where I summarize key takeaways from Observability Engineering, by Charity Majors, Liz Fong-Jones and George Miranda. There are 5 parts to this book, and so I'm planning on writing 5 individual posts in total - and will keep adding to each part as I progress reading.
+Hi! My name is Sneha, and this is the first post in a series of blog posts I'm writing where I summarize key takeaways from Observability Engineering, by Charity Majors, Liz Fong-Jones and George Miranda. There are 5 parts to this book, and so I'm planning on writing 5 individual posts in total - and will keep adding to each part as I progress reading.
 
 Now that the logistics are covered: let's get into it!
 
