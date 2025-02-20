@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			<title>Observability Engineering - Part 1 (Chapters 1 - 4) Summary - My blog</title>
+		
+
+		<link rel="stylesheet" href="/assets/styles.css">
+
+		
+			<link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/4494915?s=400&u=7c85e32b2f657fe19d99406ee4b10362c17e1a4f&v=4">
+		
+
+	</head>
+	<body>
+
+		<header class="header">
+  <div class="container">
+    <a class="logo" href="/">
+  <img src="https://avatars.githubusercontent.com/u/4494915?s=400&u=7c85e32b2f657fe19d99406ee4b10362c17e1a4f&v=4" alt="My blog logo"/>
+</a>
+
+    <nav class="nav">
+  <ul class="list list--nav">
+    
+      
+    
+      
+        <li class="item  item--nav">
+          
+            <a href="/about/">About</a>
+          
+        </li>
+      
+    
+      
+        <li class="item  item--nav">
+          
+            
+            <a href="/">Blog</a>
+          
+        </li>
+      
+    
+      
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+
+<main class="main  container">
+
+	<article class="article  article--post  content  typeset">
+
+    <h1>Observability Engineering - Part 1 (Chapters 1 - 4) Summary</h1>
+		
+
+<small class="small  post-meta">
+  
+    
+      <span class="label  label--category">General</span>
+    
+  &nbsp;&middot;&nbsp;<time datetime="2025-02-19T00:00:00-06:00" class="time">19 Feb 2025</time>
+</small>
+
+    <p>Hi! My name is Sneha, and this is the first post in a a series of blog posts I’m writing where I summarize key takeaways from Observability Engineering, by Charity Majors, Liz Fong-Jones and George Miranda. There are 5 parts to this book, and so I’m planning on writing 5 individual posts in total - and will keep adding to each part as I progress reading.</p>
+
+<p>Now that the logistics are covered: let’s get into it!</p>
+
+<p><img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTk4YTAxZHMyYzdjOWxvemg3djA0NXh6dWFnNGlzaHVlaGY4anVscCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dSSbVlZgIXBtv2gK5k/giphy.gif" alt="here we go" /></p>
+
+<p><b> Chapter 1: What is Observability </b></p>
+
+<p>Summary/Key Takeaways</p>
+
+<ul>
+  <li>Starts with the mathematical definition of observability - coined by an engineer (Rudolf E Kálmán in 1960) as: a measure of how well internal states of a system can be inferred from knowledge of external outputs.</li>
+  <li>Covers items that form a litmus test for an observable system, including a few that really spoke out to me:
+    <ul>
+      <li>“Can you understand what any particular user of your software may be experiencing at any given time”</li>
+      <li>“Can you identify which system user is generating the most load (and slowing performance the most), as well as the 2nd, 3rd or 100th most load generating users?”</li>
+      <li>Paraphrasing here but: can we get ahead of data needs and get insight on issues even when it’s the first time we’re exposed to something?</li>
+      <li>Are we continuously aggregating data to be able to extrapolate on trends?</li>
+    </ul>
+  </li>
+  <li>Definition of observability is “how well you can understand and explain any state your system can get into, no matter how novel or bizzare”</li>
+  <li>Thought an interesting note was not only how can we gather useful data/what are technical requirements for processing that data but: what team capabilities are necessary to benefit from that data? Having the data is one thing, but how do we consume it in a useful way.</li>
+  <li>Mischaracterizations: observability is not just telemetry
+    <ul>
+      <li>3 pillars of telemetry: metrics, logs, traces</li>
+      <li>The goal is to evolve the way we think about gathering the data needed to debug effectively.</li>
+      <li>The book makes a stark distinction between monitoring systems and observability. Open question in my eyes that this raises: how do we move past monitoring?</li>
+    </ul>
+  </li>
+  <li>Monitoring alone doesn’t help us fully see our systems. Setting performance thresholds is an arbitrary process.</li>
+  <li>The book mentions limits to low-level commands like strace, tcpdump, print statements, ect. (Personally, I disagree - I find so much use out of low level commands to dig into root causes and look at individual systems - the book seems to fault them a bit)</li>
+  <li>Monitoring and metric-based tools are built with assumptions: including your app/system is a monolith, and everything runs on containers, VMs, or bare metal which we control. Things are rarely isolated in systems and infra is dynamic and interacts with many services.</li>
+  <li>Debugging with observability starts with understanding deep context: understanding how a system works end to end, reconstructing the environment and circumstances.</li>
+  <li>“Monitoring is for the known-unknowns, but observability is for the unknown-unknowns”</li>
+  <li>Cardinality: the uniqueness of data values contained in a set.
+    <ul>
+      <li>Low cardinality means that there are lots of duplicate values</li>
+      <li>High cardinality means we have a large amount of unique values</li>
+      <li>For observability, high-cardinality information is almost always most useful</li>
+    </ul>
+  </li>
+  <li>Dimensionality: number of keys within that data
+    <ul>
+      <li>In observable systems, telemetry is “wide” - lots of key-value pairs.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><b> Chapter 2: How Debugging Practices Differ Between Observability and Monitoring </b></p>
+
+<p>Summary/Key Takeaways</p>
+
+<ul>
+  <li>Elaboration on how monitoring is all about checking a system against conditions (reactive)</li>
+  <li>Meanwhile, observability is about exploratory investigations and determining where and why performance issues may be occuring (proactive)</li>
+  <li>Often times we get familiar with systems and learn how to debug, given metrics/alerts, by intuition. However, with a different application, different architecture this doesn’t apply.</li>
+  <li>Institutional knowledge is unwritten information that may be known to some but is not commonly known by others. With monitoring-based approaches, teams often orient themselves around those with the most senority/knowledge as they have the most insight on patterns.</li>
+  <li>With teams that practice observability, the best debugger on a team is typically the most curious - exploratory questions lead towards more discovery.</li>
+</ul>
+
+
+  </article>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="copyright  typeset">
+      <small class="small">&copy; Sneha Jalukar 2025</small>
+    </div>
+  </div>
+</footer>
+
+
+
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Neuton:400,700" rel="stylesheet">
+	</body>
+</html>
