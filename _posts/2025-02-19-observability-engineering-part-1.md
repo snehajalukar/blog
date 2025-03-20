@@ -49,3 +49,31 @@ Summary/Key Takeaways
 - Often times we get familiar with systems and learn how to debug, given metrics/alerts, by intuition. However, with a different application, different architecture this doesn't apply.
 - Institutional knowledge is unwritten information that may be known to some but is not commonly known by others. With monitoring-based approaches, teams often orient themselves around those with the most senority/knowledge as they have the most insight on patterns.
 - With teams that practice observability, the best debugger on a team is typically the most curious - exploratory questions lead towards more discovery.
+
+<b><u>Page Updated (March 20th, 2025)<b><u>
+
+<b> Chapter 3: Lessons from Scaling Without Observability </b>
+
+Summary/Key Takeaways
+- Author worked for Parse (aquired by Facebook) - which had its observability issues but they prioritized dev speed, which was the right thing to do. However In August 2012 they faced a massive scaling problem (Parse went down when an app hosted with them livestreamed).
+- It was hard to isolate the problem as when something got slow, everything got slow.
+- The first attempt at solving this was overprovisioning instances (expanding capacity so things run at 20% utilization normally so spikes are able to be handled).
+- Things have evolved from just "the app" and "the database" to modern systems (including microservices) used by different tenants that require scaling and different levels of usage. A single database has turned into a range of storage systems. This has led to complexity in operating/administering systems but also difficulty in understanding systems.
+- Interesting note: "User experience can no longer be generalized as being the same for all service users. In the new model, different users of a service may be routed through the system in different ways, using different components, providing experiences that can vary widely."
+- "Engineering teams must reprioritize the value of production and change their prac‐ tices accordingly. By not shifting production systems to their primary focus, these teams will be relegated to toiling away on production systems with subpar tooling, visibility, and observability. They will continue to treat production as a fragile envi‐ ronment where they hesitate to tread—instinctively and comfortably rolling back deployments at the slightest sight of potential issues—because they lack the controls to make small tweaks, tune settings, gently degrade services, or progressively deploy changes in response to problems they intimately understand."
+- Once they made the shift to an approach to slice and dice and follow a trail of breadcrumbs to a solution (high cardinality tool called Scuba) - triaging issues became easier.
+
+<b> Chapter 4: How Observability Relates to DevOps, SRE, and Cloud Native </b>
+
+- "Observability and testability require continuous investment rather than being a onetime addition, or having a one-size-fits-all solution."
+- The Cloud Native Computing Foundation (CNCF) defines cloud native as “building
+and running scalable applications in modern, dynamic environments...[Cloud native] techniques enable loosely coupled systems that are resilient, manageable, and observable. Combined with robust automation, they allow engineers to make high-impact changes frequently and predictably with minimal toil.”
+- The definition above doesn't just focus on scalability, but on development velocity and operability as goals.
+- The goal of observability is to provide a level of introspection that helps people reason about the internal state of their systems and applications.
+- Seeing a recurring theme: there's an emphasis on how observability is about understanding the stack trace and flow. Distributed tracing allows us to break down and vidualize each individual step to see how a buggy environment became that way.
+- Goal: shift away from cause-based monitoring and toward symptom-based monitoring (from reactive to proactive).
+- Observability can be a precursor to many things such as:
+    - chaos engineering/continuous verification
+    - feature flagging
+    - progressive release patterns (blue/green deployments)
+    - incident analysis/blameless postmortem

@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-			<title>Observability Engineering - Part 1 (Chapters 1 - 4) Summary - My blog</title>
+			<title>Observability Engineering - Part 1 (Chapters 1 - 4) Summary - Sneha Jalukar</title>
 		
 
 		<link rel="stylesheet" href="/assets/styles.css">
@@ -18,7 +18,7 @@
 		<header class="header">
   <div class="container">
     <a class="logo" href="/">
-  <img src="https://avatars.githubusercontent.com/u/4494915?s=400&u=7c85e32b2f657fe19d99406ee4b10362c17e1a4f&v=4" alt="My blog logo"/>
+  <img src="https://avatars.githubusercontent.com/u/4494915?s=400&u=7c85e32b2f657fe19d99406ee4b10362c17e1a4f&v=4" alt="Sneha Jalukar logo"/>
 </a>
 
     <nav class="nav">
@@ -67,7 +67,7 @@
   &nbsp;&middot;&nbsp;<time datetime="2025-02-19T00:00:00-06:00" class="time">19 Feb 2025</time>
 </small>
 
-    <p>Hi! My name is Sneha, and this is the first post in a a series of blog posts I’m writing where I summarize key takeaways from Observability Engineering, by Charity Majors, Liz Fong-Jones and George Miranda. There are 5 parts to this book, and so I’m planning on writing 5 individual posts in total - and will keep adding to each part as I progress reading.</p>
+    <p>Hi! My name is Sneha, and this is the first post in a series of blog posts I’m writing where I summarize key takeaways from Observability Engineering, by Charity Majors, Liz Fong-Jones and George Miranda. There are 5 parts to this book, and so I’m planning on writing 5 individual posts in total - and will keep adding to each part as I progress reading.</p>
 
 <p>Now that the logistics are covered: let’s get into it!</p>
 
@@ -127,6 +127,41 @@
   <li>With teams that practice observability, the best debugger on a team is typically the most curious - exploratory questions lead towards more discovery.</li>
 </ul>
 
+<p><b><u>Page Updated (March 20th, 2025)<b><u></u></b></u></b></p>
+
+<p><b> Chapter 3: Lessons from Scaling Without Observability </b></p>
+
+<p>Summary/Key Takeaways</p>
+<ul>
+  <li>Author worked for Parse (aquired by Facebook) - which had its observability issues but they prioritized dev speed, which was the right thing to do. However In August 2012 they faced a massive scaling problem (Parse went down when an app hosted with them livestreamed).</li>
+  <li>It was hard to isolate the problem as when something got slow, everything got slow.</li>
+  <li>The first attempt at solving this was overprovisioning instances (expanding capacity so things run at 20% utilization normally so spikes are able to be handled).</li>
+  <li>Things have evolved from just “the app” and “the database” to modern systems (including microservices) used by different tenants that require scaling and different levels of usage. A single database has turned into a range of storage systems. This has led to complexity in operating/administering systems but also difficulty in understanding systems.</li>
+  <li>Interesting note: “User experience can no longer be generalized as being the same for all service users. In the new model, different users of a service may be routed through the system in different ways, using different components, providing experiences that can vary widely.”</li>
+  <li>“Engineering teams must reprioritize the value of production and change their prac‐ tices accordingly. By not shifting production systems to their primary focus, these teams will be relegated to toiling away on production systems with subpar tooling, visibility, and observability. They will continue to treat production as a fragile envi‐ ronment where they hesitate to tread—instinctively and comfortably rolling back deployments at the slightest sight of potential issues—because they lack the controls to make small tweaks, tune settings, gently degrade services, or progressively deploy changes in response to problems they intimately understand.”</li>
+  <li>Once they made the shift to an approach to slice and dice and follow a trail of breadcrumbs to a solution (high cardinality tool called Scuba) - triaging issues became easier.</li>
+</ul>
+
+<p><b> Chapter 4: How Observability Relates to DevOps, SRE, and Cloud Native </b></p>
+
+<ul>
+  <li>“Observability and testability require continuous investment rather than being a onetime addition, or having a one-size-fits-all solution.”</li>
+  <li>The Cloud Native Computing Foundation (CNCF) defines cloud native as “building
+and running scalable applications in modern, dynamic environments…[Cloud native] techniques enable loosely coupled systems that are resilient, manageable, and observable. Combined with robust automation, they allow engineers to make high-impact changes frequently and predictably with minimal toil.”</li>
+  <li>The definition above doesn’t just focus on scalability, but on development velocity and operability as goals.</li>
+  <li>The goal of observability is to provide a level of introspection that helps people reason about the internal state of their systems and applications.</li>
+  <li>Seeing a recurring theme: there’s an emphasis on how observability is about understanding the stack trace and flow. Distributed tracing allows us to break down and vidualize each individual step to see how a buggy environment became that way.</li>
+  <li>Goal: shift away from cause-based monitoring and toward symptom-based monitoring (from reactive to proactive).</li>
+  <li>Observability can be a precursor to many things such as:
+    <ul>
+      <li>chaos engineering/continuous verification</li>
+      <li>feature flagging</li>
+      <li>progressive release patterns (blue/green deployments)</li>
+      <li>incident analysis/blameless postmortem</li>
+    </ul>
+  </li>
+</ul>
+
 
   </article>
 
@@ -135,7 +170,7 @@
 <footer class="footer">
   <div class="container">
     <div class="copyright  typeset">
-      <small class="small">&copy; My blog 2025</small>
+      <small class="small">&copy; Sneha Jalukar 2025</small>
     </div>
   </div>
 </footer>
