@@ -76,7 +76,35 @@
 <p><b> Chapter 5: Structured Events Are the
 Building Blocks of Observability </b></p>
 
-<h2 id="summarykey-takeaways">Summary/Key Takeaways</h2>
+<p>Summary/Key Takeaways</p>
+<ul>
+  <li>The fundamental building block of observability: structured event.</li>
+  <li>Prerequisite for observability: arbitrarily wide structured events.</li>
+  <li>Definition of an event: a record of everything that occured while one particular request interacted with your service.</li>
+  <li>The book makes a distinction between metrics/telemetry and observability; metrics are pre-aggregated reports and disconnected (singular pieces of data).</li>
+  <li>Events are snapshots of what happened at a particular point in time.</li>
+  <li>Structured data is clearly defined and searchable; unstructured data isn’t organized in an easily searchable manner and is usually stored in its native format.</li>
+  <li>Unstructured logs can be made into structured logs - by adding context and exploring different formatting.</li>
+</ul>
+
+<p><b> Chapter 6: Stitching Events Into Traces</b></p>
+
+<p>Summary/Key Takeaways</p>
+<ul>
+  <li>Distributed traces are simply an interrelated series of events.</li>
+  <li>“Distributed tracing is a method of tracking the progression of a single request—called a trace—as it is handled by various services that make up an application. Tracing in this sense is “distributed” because in order to fulfill its functions, a singular request must often traverse process, machine, and network boundaries.”</li>
+  <li>Requests often traverse messy and upredictable paths through a distributed system. To construct the view, we need five pieces of data for each component:
+    <ul>
+      <li>TraceID, SpanID, ParentID, Timestamp, Duration</li>
+      <li>Any additional data added to a span is a series of tags:
+        <ul>
+          <li>ex: Service Name, Span Name</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>“Events are the building blocks of observability, and traces are simply an interrelated series of events. The concepts used to stitch together spans into a cohesive trace are useful in the setting of service-to-service communication.”</li>
+</ul>
 
 
   </article>
