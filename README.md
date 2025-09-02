@@ -5,4 +5,4 @@ Local development:
 bundle exec jekyll serve
 ```
 
-# Credit to the garth kit for my blog template: [Garth](https://garth.darn.es/)
+### Credit to the garth kit for my blog template: [Garth](https://garth.darn.es/)
