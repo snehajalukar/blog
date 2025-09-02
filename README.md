@@ -1,3 +1,5 @@
+### Blog
+
 This repository houses the code for the sneha codes [blog](https://blog.snehacodes.com)
 
 Local development:
