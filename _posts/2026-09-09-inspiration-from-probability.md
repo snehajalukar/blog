@@ -39,7 +39,9 @@ And this is where it gets interesting.
 
 ![Probability examples for 2, 10, 100, and 500 applications assuming a 1% chance per application.](/assets/job-search-probability-examples.png)
 
-With **2 attempts**, you're at about **1.99%**.
+With **2 attempts**, you're at about **1.99%**. 
+
+I know, not much better. But...suppose we throw in more attempts.
 
 With **10**, **9.56%**.
 
@@ -47,4 +49,6 @@ With **100**, **63.40%**.
 
 With **500**, **99.34%**.
 
-Again, hiring does not actually work like a perfectly controlled probability experiment. Every application is different. Your resume improves. Your interviewing improves. Referrals change the odds. Some jobs are a much better fit than others. Economic conditions change. And no number of applications can mathematically guarantee you a job.
+Hiring does not actually work like a perfectly controlled probability experiment. Every application is different. Your resume improves. Your interviewing improves. Referrals change the odds. Some jobs are a much better fit than others. Economic conditions change. And no number of applications can mathematically guarantee you a job.
+
+But if you keep trying, regardless of what you're trying to do, even if your chance of success is 1%. If you keep trying, you'll eventually get what you want.
