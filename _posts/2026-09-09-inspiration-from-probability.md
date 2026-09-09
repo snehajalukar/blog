@@ -6,9 +6,7 @@ categories:
 feature_image: "https://picsum.photos/2560/600?image=872"
 ---
 
-# The Math That Kept Me Applying
-
-I got laid off in 2024, and job searching was rough.
+I got laid off in 2024, and job searching was rough. This math kept me going.
 
 One of the things that weirdly kept me motivated was...literally math and probability. It's a weird time in the industry right now, and I have multiple friends that are job searching, so I figured I would type this up. And note: this probability math can apply to anything you want to try, not just job searching.
 
